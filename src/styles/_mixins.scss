@@ -26,3 +26,9 @@
     0 0 10px rgba($color, 0.7),
     0 0 15px rgba($color, 0.5);
 }
+
+@mixin basic-grid($min-width: 250px, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}

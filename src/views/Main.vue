@@ -1,11 +1,41 @@
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed } from 'vue';
+import UserCard from '@/components/UserCard.vue';
 
+const users = ref([
+  { id: 1, name: 'Иван Огурцов', cucumbersCount: 12 },
+  { id: 2, name: 'Елена Зеленцова', cucumbersCount: 3 },
+  { id: 3, name: 'Петр Рассолов', cucumbersCount: 9 },
+  { id: 4, name: 'Мария Маринова', cucumbersCount: 4 },
+]);
+
+const sortedUsers = computed(() =>
+  [...users.value].sort((a, b) => {
+    if (a.cucumbersCount === b.cucumbersCount) {
+      return b.name.length - a.name.length;
+    }
+    return b.cucumbersCount - a.cucumbersCount;
+  }),
+);
+
+const addCucumber = (userId) => {
+  const user = users.value.find((u) => u.id === userId);
+  if (user) {
+    user.cucumbersCount += 1;
+  }
+};
 </script>
 
 <template>
   <div class="container">
-    
+    <div class="list basic-grid">
+      <UserCard
+        v-for="user in sortedUsers"
+        :key="user.id"
+        :user="user"
+        @add-cucumber="addCucumber"
+      />
+    </div>
   </div>
 </template>
 
@@ -18,9 +48,7 @@ import { ref, computed } from "vue";
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  @include basic-grid;
   width: 100%;
 }
 </style>
