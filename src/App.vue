@@ -1,5 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from '@/components/Header.vue'
+import Main from '@/views/Main.vue'
+</script>
 
-<template></template>
+<template>
+  <Header />
+  <main> 
+    <Main />
+  </main>
+
+</template>
+
 
 <style scoped></style>
