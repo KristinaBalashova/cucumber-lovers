@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { User } from '@/composables/useUsers';
+defineProps<{
+  user: User;
+}>();
+
+defineEmits(['add-cucumber']);
+</script>
+
 <template>
   <div class="user-card">
     <div class="user-card__header">
@@ -11,14 +20,3 @@
     </button>
   </div>
 </template>
-
-<script setup>
-defineProps({
-  user: {
-    type: Object,
-    required: true,
-  },
-});
-
-defineEmits(['add-cucumber']);
-</script>

@@ -1,14 +1,12 @@
+<script setup lang="ts">
+import { User } from '@/composables/useUsers';
+defineProps<{
+  champion: User;
+}>();
+</script>
+
 <template>
   <div class="champion-card">
     🥇 Чемпион по огурцам: {{ champion.name }} - {{ champion.cucumbersCount }} шт.
   </div>
 </template>
-
-<script setup>
-defineProps({
-  champion: {
-    type: Object,
-    required: true,
-  },
-});
-</script>
