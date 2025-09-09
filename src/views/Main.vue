@@ -1,32 +1,9 @@
-<script setup>
-import { ref, computed } from 'vue';
+<script setup lang="ts">
 import UserCard from '@/components/UserCard.vue';
 import ChampionCard from '@/components/ChampionCard.vue';
+import { useUsers } from '@/composables/useUsers';
 
-const users = ref([
-  { id: 1, name: 'Иван Огурцов', cucumbersCount: 12 },
-  { id: 2, name: 'Елена Зеленцова', cucumbersCount: 3 },
-  { id: 3, name: 'Петр Рассолов', cucumbersCount: 9 },
-  { id: 4, name: 'Мария Маринова', cucumbersCount: 4 },
-]);
-
-const sortedUsers = computed(() =>
-  [...users.value].sort((a, b) => {
-    if (a.cucumbersCount === b.cucumbersCount) {
-      return b.name.length - a.name.length;
-    }
-    return b.cucumbersCount - a.cucumbersCount;
-  }),
-);
-
-const champion = computed(() => sortedUsers.value[0]);
-
-const addCucumber = (userId) => {
-  const user = users.value.find((u) => u.id === userId);
-  if (user) {
-    user.cucumbersCount += 1;
-  }
-};
+const { sortedUsers, champion, addCucumber } = useUsers();
 </script>
 
 <template>
@@ -47,7 +24,7 @@ const addCucumber = (userId) => {
 
 <style lang="scss" scoped>
 .container {
-  @include flex-column;
+  @include flex-center(column);
   gap: 20px;
   padding: 20px;
 }
