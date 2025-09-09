@@ -2,7 +2,7 @@
 @import 'mixins';
 
 .user-card {
-  @include flex-column;
+  @include flex-center(column);
   border-radius: $border-radius;
   border: 2px solid var(--card-border-color);
   gap: 10px;
@@ -13,5 +13,4 @@
     @include flex-between;
     gap: 20px;
   }
-
 }

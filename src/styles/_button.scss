@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 .btn {
   display: inline-block;
@@ -12,7 +12,7 @@
   transition: $transition;
   text-decoration: none;
   text-align: center;
-  user-select: none; 
+  user-select: none;
   background-color: var(--button-background-color);
   color: #fff;
 
