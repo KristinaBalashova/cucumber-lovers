@@ -1,10 +1,10 @@
-# Vue 
+# Vue
 
 Тестовое задание CucumbClub
 
 ## Deploy
 
-- 
+-
 
 ## Technology Stack
 
