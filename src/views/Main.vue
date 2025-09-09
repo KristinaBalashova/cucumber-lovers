@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue';
 import UserCard from '@/components/UserCard.vue';
+import ChampionCard from '@/components/ChampionCard.vue';
 
 const users = ref([
   { id: 1, name: 'Иван Огурцов', cucumbersCount: 12 },
@@ -18,6 +19,8 @@ const sortedUsers = computed(() =>
   }),
 );
 
+const champion = computed(() => sortedUsers.value[0]);
+
 const addCucumber = (userId) => {
   const user = users.value.find((u) => u.id === userId);
   if (user) {
@@ -28,6 +31,9 @@ const addCucumber = (userId) => {
 
 <template>
   <div class="container">
+    <div>
+      <ChampionCard :champion="champion" />
+    </div>
     <div class="list basic-grid">
       <UserCard
         v-for="user in sortedUsers"
@@ -44,7 +50,6 @@ const addCucumber = (userId) => {
   @include flex-column;
   gap: 20px;
   padding: 20px;
-  align-items: flex-start;
 }
 
 .list {

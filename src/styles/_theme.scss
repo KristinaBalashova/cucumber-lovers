@@ -11,7 +11,7 @@
   --accent-color: #{$light-accent};
   --card-border-color: #{$light-accent};
   ---text-color: #{$light-primary-dark};
-  --champion-bg-color: #{$light-primary};
+  --champion-bg-color: #{$light-accent};
   --champion-text-color: #{$dark-white-text};
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -25,7 +25,7 @@
   --heading-color: #{$dark-accent};
   --accent-color: #{$dark-primary};
   --card-border-color: #{$dark-primary};
-  --champion-bg-color: #{$dark-primary-dark};
+  --champion-bg-color: #{$dark-accent};
   --champion-text-color: #{$dark-white-text};
   --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
