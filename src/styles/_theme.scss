@@ -30,7 +30,7 @@
   --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 
   .cucumber-glow {
-    text-shadow: $glow-green;
+    @include text-glow($glow-green);
     animation: pulse-glow 2.5s infinite ease-in-out;
   }
 }
