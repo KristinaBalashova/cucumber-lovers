@@ -8,10 +8,10 @@ export interface User {
 
 export function useUsers() {
   const users = ref<User[]>([
-    { id: 1, name: 'Иван Огурцов', cucumbersCount: 12 },
-    { id: 2, name: 'Елена Зеленцова', cucumbersCount: 3 },
-    { id: 3, name: 'Петр Рассолов', cucumbersCount: 9 },
-    { id: 4, name: 'Мария Маринова', cucumbersCount: 4 },
+    { id: 1, name: 'Иван Огурцов', cucumbersCount: 99 },
+    { id: 2, name: 'Елена Зеленцова', cucumbersCount: 95 },
+    { id: 3, name: 'Петр Рассолов', cucumbersCount: 97 },
+    { id: 4, name: 'Мария Маринова', cucumbersCount: 98 },
   ]);
 
   const sortedUsers = computed(() =>
