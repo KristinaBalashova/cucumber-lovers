@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { User } from '@/composables/useUsers';
 defineProps<{
-  champion: User;
+  champion: User | null;
 }>();
 </script>
 
 <template>
   <div class="champion-card">
-    🥇 Чемпион по огурцам: {{ champion.name }} - {{ champion.cucumbersCount }} шт.
+    🥇 Чемпион по огурцам: {{ champion?.name }} - {{ champion?.cucumbersCount }} шт.
   </div>
 </template>
