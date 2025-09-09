@@ -6,7 +6,9 @@ const { nextTheme, toggleTheme } = useTheme();
 
 <template>
   <header class="header">
-    <div class="logo"><span class="cucumber-glow"><span class="cucumber-glow">🥒</span></span> CucumbClub</div>
+    <div class="logo">
+      <span class="cucumber-glow"><span class="cucumber-glow">🥒</span></span> CucumbClub
+    </div>
     <button @click="toggleTheme" class="btn btn--secondary">
       {{ nextTheme }}
     </button>
