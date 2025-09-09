@@ -1,0 +1,23 @@
+@import "variables";
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: $border-radius;
+  font-family: $font-family-main;
+  font-size: $font-size-base;
+  font-weight: bold;
+  cursor: pointer;
+  transition: $transition;
+  text-decoration: none;
+  text-align: center;
+  user-select: none; 
+  background-color: var(--button-background-color);
+  color: #fff;
+
+  &:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+  }
+}

@@ -1,0 +1,12 @@
+@import 'variables';
+
+.champion-card {
+  background: var(--champion-bg-color);
+  color: var(--champion-text-color);
+  border-left-color: var(--accent-color);
+  text-align: center;
+  @include size(300px, 100%);
+  border-radius: $border-radius;
+  padding: 20px;
+  
+}

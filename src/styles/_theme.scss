@@ -1,0 +1,50 @@
+@use 'sass:color';
+@import 'palette';
+
+:root {
+  --background-color: #{$light-bg};
+  --text-color: #{$light-text};
+  --card-background-color: #{$light-card-bg};
+  --button-background-color: #{$light-primary};
+  --button-hover-color: #{$light-primary-dark};
+  --heading-color: #{$light-primary-dark};
+  --accent-color: #{$light-accent};
+  --card-border-color: #{$light-accent};
+  ---text-color: #{$light-primary-dark};
+  --champion-bg-color: #{$light-primary};
+  --champion-text-color: #{$dark-white-text};
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --background-color: #{$dark-bg};
+  --text-color: #{$dark-text};
+  --card-background-color: #{$dark-card-bg};
+  --button-background-color: #{$dark-primary};
+  --button-hover-color: #{$dark-primary-dark};
+  --heading-color: #{$dark-accent};
+  --accent-color: #{$dark-primary};
+  --card-border-color: #{$dark-primary};
+  --champion-bg-color: #{$dark-primary-dark};
+  --champion-text-color: #{$dark-white-text};
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  .cucumber-glow {
+    text-shadow: $glow-green;
+    animation: pulse-glow 2.5s infinite ease-in-out;
+  }
+}
+
+body {
+  font-family: $font-family-main;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+  font-family: $font-family-headings;
+  color: var(--heading-color);
+}
